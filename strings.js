@@ -50,24 +50,25 @@ content.addEventListener("keyup", function(event){
 });
 
 
-//will pass testString in
+//will pass testString in to all these
 function reversal(string) {
-let splitArray = string.split("");
+let reversal = string.split("").reverse().join("");
 // split turns string into an array of characters
-let reverseArray=splitArray.reverse();
 // reverse reverses order of array of characters
-let reverseString= reverseArray.join("");
 //join puts the array back into a string
-outputDiv.innerHTML= reverseString;
+outputDiv.innerHTML= reversal;
 }
 // reverses the order of the characters in the string, and outputs the result in the DOM, below the text input.
 
-function alphabits() {
-
+function alphabits(string) {
+let alphabits= string.split("").sort().join("");
+//.sort sorts alphabetically
+outputDiv.innerHTML+= `<br> ${alphabits}`;
 }
 // return the characters in alphabetical order, and outputs the result in the DOM, below the text input.
 
-function palindrome() {
+function palindrome(string) {
+//for loop to look for pattern?
 
 }
 //determine whether the string is a palindrome. If it is, display the text "Your string is a palidrome" in the DOM, below the text input.
