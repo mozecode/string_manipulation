@@ -52,25 +52,33 @@ content.addEventListener("keyup", function(event){
 
 //will pass testString in to all these
 function reversal(string) {
-let reversal = string.split("").reverse().join("");
+	let reversal = string.split("").reverse().join("");
 // split turns string into an array of characters
 // reverse reverses order of array of characters
 //join puts the array back into a string
-outputDiv.innerHTML= reversal;
+	outputDiv.innerHTML= reversal;
 }
 // reverses the order of the characters in the string, and outputs the result in the DOM, below the text input.
 
 function alphabits(string) {
-let alphabits= string.split("").sort().join("");
+	let alphabits= string.split("").sort().join("");
 //.sort sorts alphabetically
-outputDiv.innerHTML+= `<br> ${alphabits}`;
+	outputDiv.innerHTML+= `<br> ${alphabits}`;
 }
 // return the characters in alphabetical order, and outputs the result in the DOM, below the text input.
 
 function palindrome(string) {
-//for loop to look for pattern?
-
+//what about spaces? replace?
+//to lower case method first
+//does the word in reverse equal the original?
+	let lowercase= string.toLowerCase().replace(/\s/g,"");
+	console.log ("lowercase",lowercase);
+	let reverse = lowercase.split("").reverse().join("");
+	console.log ("reverse",reverse);
+	if(reverse === lowercase){
+	outputDiv.innerHTML+=`<br>Your string is a palindrome.`;
+	}
 }
-//determine whether the string is a palindrome. If it is, display the text "Your string is a palidrome" in the DOM, below the text input.
+//determine whether the string is a palindrome. If it is, display the text "Your string is a palindrome" in the DOM, below the text input.
 
 
